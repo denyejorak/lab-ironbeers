@@ -1,0 +1,12 @@
+{{#each beer}}
+<div class="card with-description">
+       {{> beerpartial this}}
+        <p>Brewer tips: {{this.brewers_tips}}</p>
+        <p>Food pairing:</p>
+        <ol>
+             {{#each this.food_pairing}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ol>
+    </div>
+{{/each}}
